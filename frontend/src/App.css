@@ -1,0 +1,189 @@
+/* Estilos generales para todo el documento */
+html, body {
+  background-color: #f0f8ff; /* Fondo celeste claro */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* Asegura que el fondo ocupe toda la página */
+  box-sizing: border-box;
+}
+
+/* Encabezado principal */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0099cc; /* Celeste oscuro */
+  margin-top: 20px;
+}
+
+/* Contenedor de la lista de artículos */
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Diseño flexible */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Estilos para cada artículo en la lista */
+.article-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.article-item:hover {
+  transform: scale(1.02);
+}
+
+/* Título del artículo */
+.article-title {
+  color: #0099cc; /* Celeste oscuro */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Descripción del artículo */
+.article-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Imagen del artículo */
+.article-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Estilo del botón 'Leer más' */
+.article-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #0099cc; /* Botón celeste oscuro */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.article-link:hover {
+  background-color: #0077a3; /* Celeste más oscuro */
+}
+
+/* Estilos para la página de detalle del artículo */
+.article-detail {
+  max-width: 900px; /* Hacer el contenedor más ancho */
+  margin: 40px auto; /* Centramos el contenedor en la pantalla */
+  padding: 20px;
+  background-color: white; /* Fondo blanco para el detalle */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center; /* Centramos el texto */
+}
+
+/* Contenedor flex para la imagen y el video */
+.article-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Imagen dentro del contenedor flex */
+.article-media img {
+  width: 50%; /* La imagen ocupará el 50% del ancho */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Video embebido en la página de detalle */
+.article-media iframe {
+  width: 50%; /* El video ocupará el 50% del ancho */
+  height: 300px; /* Altura fija para el video */
+  border-radius: 8px;
+}
+
+/* Descripción del artículo en detalle */
+.article-detail p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Botón de regreso a la lista principal */
+.article-detail .back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0099cc; /* Celeste oscuro */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.article-detail .back-link:hover {
+  background-color: #0077a3; /* Celeste más oscuro */
+}
+
+/* Responsividad para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  /* Hacer que imagen y video ocupen el 100% en pantallas pequeñas */
+  .article-media {
+    flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+  }
+
+  .article-media img, 
+  .article-media iframe {
+    width: 100%; /* Ambas ocuparán el 100% del ancho en móviles */
+    height: auto;
+  }
+
+  .article-detail iframe {
+    height: 250px; /* Ajustar altura del video en móviles */
+  }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .article-title {
+    font-size: 1.1rem;
+  }
+
+  .article-description {
+    font-size: 0.85rem;
+  }
+
+  .article-link {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .article-detail h1 {
+    font-size: 1.5rem; /* Reducir el tamaño del título en móviles */
+  }
+
+  .article-detail p {
+    font-size: 1rem; /* Reducir la fuente en móviles */
+  }
+
+  .article-detail iframe {
+    height: 250px; /* Ajustar altura del video en móviles */
+  }
+}
+
+/* Asegurar que las imágenes y videos sean completamente responsivos */
+.article-image, .article-video iframe {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Asegurar comportamiento correcto */
+}

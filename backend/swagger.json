@@ -1,0 +1,24 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "API de Artículos",
+      "description": "API para manejar artículos y noticias"
+    },
+    "host": "localhost:5000",
+    "basePath": "/api",
+    "schemes": ["http"],
+    "paths": {
+      "/articles": {
+        "get": {
+          "summary": "Obtiene todos los artículos",
+          "responses": {
+            "200": {
+              "description": "Lista de artículos"
+            }
+          }
+        }
+      }
+    }
+  }
+  
