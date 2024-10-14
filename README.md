@@ -8,7 +8,6 @@ Base de Datos: MongoDB
 
 Instrucciones de Instalación
 1. Clonar el Repositorio
-git clone https://github.com/tu-usuario/prueba-tecnica-noticias.git
 
 2. Instalación de Dependencias
 Navega a la carpeta backend y ejecuta: npm install
